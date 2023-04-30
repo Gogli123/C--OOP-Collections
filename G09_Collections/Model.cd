@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="G09_Collections.MyBaseCollection&lt;T&gt;" Collapsed="true">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAQAAAABAQAoBAAAAAEAACAAABQIAA=</HashCode>
+      <FileName>MyBaseCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="G09_Collections.MyStack&lt;T&gt;" Collapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>MyStack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G09_Collections.MyQueue&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="G09_Collections.MyList&lt;T&gt;" Collapsed="true">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAEAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>MyList.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>
