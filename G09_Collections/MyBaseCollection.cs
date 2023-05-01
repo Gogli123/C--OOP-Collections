@@ -2,10 +2,18 @@
 
 namespace G09_Collections;
 
-public abstract class MyBaseCollection<T> : ICollection<T>
+public abstract class MyBaseCollection<T> : ICollection<T>, IEnumerable, IEnumerator
 {
     protected T?[] _items;
     protected int _count;
+    private int _index;
+
+    public IEnumerator GetEnumerator()
+    {
+        _index = -1;
+        return this;
+    }
+
 
     public MyBaseCollection()
     {
@@ -76,26 +84,34 @@ public abstract class MyBaseCollection<T> : ICollection<T>
         return true;
     }
 
-    public int Count
+    public int Count => _count;
+
+    public bool MoveNext()
     {
-        get
+        if (_index < _items.Length - 1)
         {
-            return _count;
+            _index++;
+            return true;
         }
+
+        return false;
+    }
+
+    public void Reset()
+    {
+        _index = -1;
+    }
+
+    public object? Current => _items[_index];
+
+    IEnumerator<T> IEnumerable<T>.GetEnumerator()
+    {
+        return ((IEnumerable<T>)_items).GetEnumerator();
     }
 
     //------------------------------------------------->
     public bool IsReadOnly { get; }
 
-    public IEnumerator<T> GetEnumerator()
-    {
-        throw new NotImplementedException();
-    }
-
-    IEnumerator IEnumerable.GetEnumerator()
-    {
-        return GetEnumerator();
-    }
 
     protected static void Resize<T>(ref T?[] array, int size)
     {
